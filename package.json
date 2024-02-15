@@ -1,0 +1,29 @@
+{
+    "name": "create-angular-auth",
+    "version": "1.0.0",
+    "description": "A CLI tool to create an Angular application with authentication, styled using TailwindCSS and secured with Passport and Bcrypt.",
+    "bin": "./cli.js",
+    "scripts": {
+      "install:frontend": "cd frontend && npm install",
+      "install:backend": "cd backend && npm install",
+      "postinstall": "npm run install:frontend && npm run install:backend",
+      "start:frontend": "cd frontend && ng serve",
+      "start:backend": "cd backend && nodemon index.js",
+      "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
+    },
+    "dependencies": {
+      "concurrently": "^6.0.0"
+    },
+    "keywords": ["angular", "authentication", "tailwindcss", "passport", "bcrypt", "cli", "template"],
+    "author": "Your Name <your-email@example.com>",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/furbo1/angular-auth-template.git"
+    },
+    "bugs": {
+      "url": "https://github.com/furbo1/angular-auth-template/issues"
+    },
+    "homepage": "https://github.com/furbo1/angular-auth-template#readme"
+  }
+  
