@@ -1,0 +1,12 @@
+<div>
+  <ng-container *ngIf="authService.isAuthenticated(); else notAuthenticated">
+    <a routerLink="/" routerLinkActive="text-red-400" [routerLinkActiveOptions]="{exact: true}" class="text-sm uppercase mx-3 text-white cursor-pointer hover:text-red-400">Home</a>
+    <a routerLink="/about" routerLinkActive="text-red-400" class="text-sm uppercase mx-3 text-white cursor-pointer hover:text-red-400">About</a>
+    <a routerLink="/contact" routerLinkActive="text-red-400" class="text-sm uppercase mx-3 text-white cursor-pointer hover:text-red-400">Contact</a>
+    <button (click)="handleLogout()" class="text-sm uppercase mx-3 text-white cursor-pointer hover:text-red-400">Logout</button>
+  </ng-container>
+  <ng-template #notAuthenticated>
+    <a routerLink="/login" routerLinkActive="text-red-400" class="text-sm uppercase mx-3 text-white cursor-pointer hover:text-red-400">Login</a>
+    <a routerLink="/register" routerLinkActive="text-red-400" class="text-sm uppercase mx-3 text-white cursor-pointer hover:text-red-400">Register</a>
+  </ng-template>
+</div>
